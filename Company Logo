@@ -1,0 +1,12 @@
+from collections import Counter
+
+if __name__ == '__main__':
+    s = input().strip()
+
+    char_counts = Counter(s)
+
+    sorted_items = sorted(char_counts.items(), key=lambda x: (-x[1], x[0]))
+
+    
+    for i in range(3):
+        print(f"{sorted_items[i][0]} {sorted_items[i][1]}")
