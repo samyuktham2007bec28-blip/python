@@ -1,0 +1,22 @@
+from collections import deque
+
+def solve():
+    n = int(input())
+    blocks = deque(map(int, input().split()))
+    current_top = float('inf')
+    possible = True
+    while blocks:
+        if blocks[0] >= blocks[-1]:
+            picked = blocks.popleft()
+        else:
+            picked = blocks.pop()
+        if picked <= current_top:
+            current_top = picked
+        else:
+            possible = False
+            break
+            
+    print("Yes" if possible else "No")
+t = int(input())
+for _ in range(t):
+    solve()
