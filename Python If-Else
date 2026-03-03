@@ -1,0 +1,21 @@
+import sys
+
+def check_weirdness(n):
+    # If n is odd, print Weird
+    if n % 2 != 0:
+        print("Weird")
+    # If n is even
+    else:
+        # Range 2 to 5 inclusive
+        if 2 <= n <= 5:
+            print("Not Weird")
+        # Range 6 to 20 inclusive
+        elif 6 <= n <= 20:
+            print("Weird")
+        # Greater than 20
+        elif n > 20:
+            print("Not Weird")
+
+# Read input
+n = int(input().strip())
+check_weirdness(n)
