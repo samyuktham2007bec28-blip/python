@@ -1,0 +1,20 @@
+import collections
+import sys
+
+def solve():
+    # Read n
+    line = sys.stdin.readline()
+    if not line:
+        return
+    n = int(line.strip())
+    word_counts = collections.OrderedDict()
+    for _ in range(n):
+        word = sys.stdin.readline().strip()
+        if word in word_counts:
+            word_counts[word] += 1
+        else:
+            word_counts[word] = 1
+    print(len(word_counts))
+    print(*(word_counts.values()))
+
+solve()
