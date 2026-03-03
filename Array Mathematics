@@ -1,0 +1,10 @@
+import numpy
+n, m = map(int, input().split())
+a = numpy.array([input().split() for _ in range(n)], int)
+b = numpy.array([input().split() for _ in range(n)], int)
+print(a + b)           # Add
+print(a - b)           # Subtract
+print(a * b)           # Multiply
+print(a // b)          # Integer Division (Floor Division)
+print(a % b)           # Mod
+print(a ** b)          # Power
