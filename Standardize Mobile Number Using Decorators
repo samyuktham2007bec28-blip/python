@@ -1,0 +1,7 @@
+def wrapper(f):
+    def fun(l):
+        formatted = []
+        for n in l:
+            formatted.append(f"+91 {n[-10:-5]} {n[-5:]}")
+        f(formatted)
+    return fun
