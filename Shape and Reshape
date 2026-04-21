@@ -1,0 +1,7 @@
+import numpy
+input_str = input()
+str_list = input_str.split()
+int_list = [int(x) for x in str_list]
+my_array = numpy.array(int_list)
+reshaped_array = numpy.reshape(my_array, (3, 3))
+print(reshaped_array)
