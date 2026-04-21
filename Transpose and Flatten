@@ -1,0 +1,12 @@
+import numpy
+n_m = list(map(int, input().split()))
+n = n_m[0]
+m = n_m[1]
+matrix_elements = []
+for _ in range(n):
+    row = list(map(int, input().split()))
+    matrix_elements.append(row)
+my_array = numpy.array(matrix_elements)
+print(numpy.transpose(my_array))
+print(my_array.flatten())
+
