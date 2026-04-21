@@ -1,0 +1,14 @@
+import re
+
+def validate_uid(uid):
+    if len(uid) != 10: return "Invalid"
+    if len(set(uid)) != 10: return "Invalid"
+    if len(re.findall(r'[A-Z]', uid)) < 2: return "Invalid"
+    if len(re.findall(r'\d', uid)) < 3: return "Invalid"
+    if not re.match(r'^[a-zA-Z0-9]*$', uid): return "Invalid"
+    return "Valid"
+import sys
+input_data = sys.stdin.read().split()
+t = int(input_data[0])
+for i in range(1, t + 1):
+    print(validate_uid(input_data[i]))
