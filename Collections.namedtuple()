@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import namedtuple
+
+# Read the number of students (N) and column names
+N = int(input())
+columns = input().split()
+
+# Create a namedtuple class for the students
+Student = namedtuple('Student', columns)
+
+# Read student data and calculate the total marks
+total_marks = 0
+for _ in range(N):
+    data = input().split()
+    student = Student(*data)
+    # Access marks using the field name 'MARKS'
+    total_marks += int(student.MARKS)
+
+# Calculate and print the average marks
+average = total_marks / N
+print(f"{average:.2f}")
+
