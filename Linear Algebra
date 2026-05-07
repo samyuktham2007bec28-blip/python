@@ -1,0 +1,27 @@
+import numpy
+
+def calculate_determinant():
+    """
+    Reads a square matrix from user input, calculates its determinant 
+    using numpy, and prints the result rounded to 2 decimal places.
+    """
+    try:
+        # Read the size of the matrix (N)
+        N = int(input())
+        
+        # Read the matrix elements using a list comprehension and numpy array
+        # Each line of input is split into space-separated values, converted to floats,
+        # and added as a row to the array.
+        A = numpy.array([input().split() for _ in range(N)], float)
+        
+        # Calculate the determinant
+        determinant = numpy.linalg.det(A)
+        print(round(determinant, 2))
+        
+    except ValueError:
+        print("Invalid input format. Please ensure N is an integer and matrix elements are numeric.")
+    except numpy.linalg.LinAlgError as e:
+        print(f"Linear algebra error: {e}")
+
+if __name__ == "__main__":
+    calculate_determinant()
