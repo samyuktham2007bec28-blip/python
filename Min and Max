@@ -1,0 +1,8 @@
+import numpy
+n, m = map(int, input().split())
+my_array = numpy.array([input().split() for _ in range(n)], int)
+min_along_axis_1 = numpy.min(my_array, axis=1)
+result = numpy.max(min_along_axis_1)
+
+print(result)
+
