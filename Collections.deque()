@@ -1,0 +1,12 @@
+from collections import deque
+d = deque()
+n = int(input())
+
+for _ in range(n):
+    input_data = input().split()
+    method_name = input_data[0]
+    if len(input_data) > 1:
+        getattr(d, method_name)(input_data[1])
+    else:
+        getattr(d, method_name)()
+print(*(d))
