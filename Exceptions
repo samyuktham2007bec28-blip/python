@@ -1,0 +1,12 @@
+for i in range(int(input())):
+    try:
+        # Read two space-separated values, map them to integers
+        a, b = map(int, input().split())
+        # Perform integer division using '//'
+        print(a // b)
+    except ValueError as e:
+        # Handle cases where input cannot be converted to an integer
+        print("Error Code:", e)
+    except ZeroDivisionError as e:
+        # Handle cases where the divisor is zero
+        print("Error Code:", e)
