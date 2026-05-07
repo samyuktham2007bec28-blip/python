@@ -1,0 +1,31 @@
+
+def solve():
+    """
+    Reads a string S and an integer K from stdin, 
+    prints all K-length permutations of S in lexicographical order.
+    """
+    try:
+        # Read input from standard input
+        line = input().split()
+        if not line:
+            return
+
+        S = line[0]
+        K = int(line[1])
+
+        # Sort the string to ensure permutations are in lexicographical order
+        sorted_S = sorted(S)
+
+        # Generate permutations of length K
+        perms = permutations(sorted_S, K)
+
+        # Print each permutation on a new line, joining the tuple elements into a string
+        for p in perms:
+            print("".join(p))
+
+    except (EOFError, ValueError, IndexError) as e:
+        # Handle potential input errors
+        pass
+
+if __name__ == "__main__":
+    solve()
