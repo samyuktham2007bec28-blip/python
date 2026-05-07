@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read four integers from separate lines
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+# Calculate a^b + c^d
+# In Python, ** is the exponentiation operator
+result = (a ** b) + (c ** d)
+
+# Print the result
+print(result)
