@@ -1,0 +1,14 @@
+n, m = map(int, input().split())
+
+# 1. Generate the Top Half
+for i in range(n // 2):
+    pattern = ('.|.' * (2 * i + 1))
+    print(pattern.center(m, '-'))
+
+# 2. Generate the Middle (WELCOME)
+print('WELCOME'.center(m, '-'))
+
+# 3. Generate the Bottom Half (Reverse of Top)
+for i in range(n // 2 - 1, -1, -1):
+    pattern = ('.|.' * (2 * i + 1))
+    print(pattern.center(m, '-'))
