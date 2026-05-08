@@ -1,0 +1,5 @@
+def wrap(string, max_width):
+    # textwrap.wrap returns a list of lines
+    lines = textwrap.wrap(string, max_width)
+    return "\n".join(lines)
+
